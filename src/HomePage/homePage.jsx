@@ -151,13 +151,13 @@ class HomePage extends React.Component {
               {
                 this.state.allData.length < 1 && <Notification>No results Found for the applied filters!</Notification>
               }
-              {/* <Footer>
+              <Footer>
                 <div>
                   <b>
-                    Developed by: Shrikanth P S / shrikanthsp22@gmail.com
+                    Developed by: Shrikanth P S
                   </b>
                 </div>
-              </Footer> */}
+              </Footer>
             </CardContainer>
         }
       </ParentWrapper >
@@ -165,4 +165,8 @@ class HomePage extends React.Component {
   }
 }
 export default withRouter(HomePage);
-// export default withRouter(HomePage);
+
+
+
+
+
