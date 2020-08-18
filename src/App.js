@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import "./App.css";
+import HomePage from "./HomePage/homePage";
+import { MainWrapper, HeaderComponent } from "./main.styles";
+import { TEXT_CONSTANTS } from "./constants";
+import { Switch, Route } from 'react-router-dom';
+
+function Home(props) {
+  return (
+    <>
+      <HeaderComponent>{TEXT_CONSTANTS.HEADER_NAME}</HeaderComponent>
+      <HomePage />
+    </>
+  )
+}
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <MainWrapper>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/filter' component={Home} />
+      </Switch>
+
+    </MainWrapper>
   );
 }
 
