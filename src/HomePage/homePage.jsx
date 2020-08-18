@@ -49,7 +49,7 @@ class HomePage extends React.Component {
     if (land.toString()) {
       apiString = apiString + `&land_success=${land}`;
     }
-    history.push(`filter`);
+    // history.push(`filter`);
     this.setState({ cardLoading: true })
     fetch(`${apiString}`).then(res => res.json()).then(result => this.setState({ allData: result, cardLoading: false }))
   }

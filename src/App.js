@@ -22,7 +22,7 @@ function App() {
     <MainWrapper>
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/filter' component={Home} />
+        {/* <Route exact path='/filter' component={Home} /> */}
       </Switch>
 
     </MainWrapper>
